@@ -1,0 +1,65 @@
+.banner {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #001a52, #002b80);
+    color: white;
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 30px;
+
+        button {
+            background: #ff4500;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+
+            &:hover {
+                background: #e63e00;
+            }
+        }
+    }
+
+    .stats {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin: 40px 0;
+
+        .statBox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            h3 {
+                font-size: 24px;
+            }
+
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .imageContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
