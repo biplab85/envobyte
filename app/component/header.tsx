@@ -19,25 +19,28 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="header-wrapper py-[16px] bg-[#03135b] flex items-center">
-      <div className="flex items-center justify-between w-full">
-        <Image src={Logo} alt="Logo" width={240} />
-        <ul className="flex space-x-10 text-[16px] uppercase text-[#efefef]">
-          {NAV_LINKS.map(({ name, href }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                className={`hover:text-[#FF693B] transition-all ${pathname === href ? "text-[#FF693B] font-bold" : "text-gray-400"
-                  }`}
-              >
-                {name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <button className="button">  See Pricing        </button>
-      </div>
-    </nav>
+    <div className="container m-auto header-wrapper py-[16px] bg-[--default-bg] flex items-center justify-between">
+      <Image src={Logo} alt="Logo" width={240} />
+      <nav className="flex items-center">
+        <div className="flex items-center justify-between w-full">
+          <ul className="flex space-x-10 text-[16px] uppercase text-[#efefef]">
+            {NAV_LINKS.map(({ name, href }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className={`hover:text-[#FF693B] transition-all ${pathname === href ? "text-[#FF693B] font-bold" : "text-gray-400"
+                    }`}
+                >
+                  {name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+      <button className="envo-btn pt-[20px] pb-[20px] pr-[80px] pl-[80px] rounded-[4px]"> See Pricing </button>
+    </div>
+
   );
 };
 

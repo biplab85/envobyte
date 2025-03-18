@@ -1,0 +1,10 @@
+.container{
+    width: var(--container-width);
+    &.header-wrapper{
+        font-family: 'Inter 18pt';
+        font-weight: 600;
+        .envo-btn{
+            font-weight: 500;
+        }
+    }
+}

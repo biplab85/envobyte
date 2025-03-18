@@ -1,65 +1,127 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("../src/theme/fonts/Raleway-ExtraBold.eot");
+    src: url("../src/theme/fonts/Raleway-ExtraBold.eot?#iefix") format("embedded-opentype"),
+        url("../src/theme/fonts/Raleway-ExtraBold.woff2") format("woff2"),
+        url("../src/theme/fonts/Raleway-ExtraBold.woff") format("woff"),
+        url("../src/theme/fonts/Raleway-ExtraBold.ttf") format("truetype"),
+        url("../src/theme/fonts/Raleway-ExtraBold.svg#Raleway-ExtraBold") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Inter 18pt";
+    src: url("../src/theme/fonts/Inter18pt-SemiBold.eot");
+    src: url("../src/theme/fonts/Inter18pt-SemiBold.eot?#iefix") format("embedded-opentype"),
+        url("../src/theme/fonts/Inter18pt-SemiBold.woff2") format("woff2"),
+        url("../src/theme/fonts/Inter18pt-SemiBold.woff") format("woff"),
+        url("../src/theme/fonts/Inter18pt-SemiBold.ttf") format("truetype"),
+        url("../src/theme/fonts/Inter18pt-SemiBold.svg#Inter18pt-SemiBold") format("svg");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
 .banner {
+    font-family: "Raleway";
     text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(to right, #001a52, #002b80);
     color: white;
+    margin-bottom: 180px;
 
     h1 {
-        font-size: 40px;
+        font-size: 75px;
         font-weight: bold;
+        line-height: 85px;
+        letter-spacing: 3.75px;
     }
 
     h3 {
-        font-size: 24px;
-        margin-bottom: 20px;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 31px;
     }
 
     .buttons {
         display: flex;
         justify-content: center;
         gap: 15px;
-        margin-bottom: 30px;
+        margin: 52px 0 0 0;
 
-        button {
-            background: #ff4500;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
+        .envoBtn {
+            background-color: #ff693b;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+            width: 238px;
+            padding: 20px 0;
+            border-radius: 4px;
 
             &:hover {
-                background: #e63e00;
+                background-color: #ea6b44;
+            }
+
+            &:active {
+                transform: scale(0.95);
+            }
+
+            &.outline {
+                border: 1px solid #fff;
+                color: #fff;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: transparent;
+                }
             }
         }
     }
 
     .stats {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        margin: 40px 0;
+        @apply flex
+        justify-center
+        mt-[55px]
+        mb-[78px];
 
         .statBox {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            h3 {
-                font-size: 24px;
+            @apply flex items-center;
+            padding: 0 60px;
+            border-right: 1px solid #fff;
+            &:last-child {
+                border: 0px;
             }
 
-            span {
-                font-size: 14px;
+            .iconContainer {
+                @apply w-[48px]
+                h-[48px]
+                flex
+                items-center
+                justify-center
+                rounded-[3px]
+                mr-[16px]
+                border-solid
+                border-[3px]
+                border-[#FFF];
+            }
+
+            .content {
+                @apply text-left;
+                h3 {
+                    @apply mb-[8px]
+                    text-[30px];
+                    font-family: "Inter 18pt";
+                    font-weight: 600;
+                }
+                .semiTitle {
+                    @apply text-[16px]
+                    leading-[22px];
+                }
             }
         }
     }
 
     .imageContainer {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
+        @apply flex justify-center mt-[20px];
     }
 }

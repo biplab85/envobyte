@@ -1,4 +1,35 @@
 body {
     color: #fff;
     overflow-x: hidden;
+    background-color: #04135b;
+}
+
+:root {
+    --default-bg: #04135b;
+    --container-width: 1795px;
+}
+.envo-btn {
+    background-color: #ff693b;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+
+    &:hover {
+        background-color: #ea6b44;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    &.outline {
+        color: #fff;
+        background-color: transparent;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
 }

@@ -5,6 +5,9 @@ import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
 import CountUp from "react-countup";
 import GlobalEdit from "../../public/icon/global-edit.svg";
+import Like from "../../public/icon/like.svg";
+import People from "../../public/icon/people.svg";
+import ProfileCircle from "../../public/icon/profile-circle.svg";
 import BannerImg from "../../public/banner.png";
 import styles from "./Banner.module.scss";
 
@@ -12,7 +15,7 @@ const Banner = () => {
   return (
     <div className={styles.banner}>
       {/* Typewriter Effect */}
-      <h1>
+      <h1 className="mb-[8px]">
         <Typewriter
           words={["DIGITAL SERVICES"]}
           loop={1} // Runs only once
@@ -24,46 +27,54 @@ const Banner = () => {
 
       <h3>BUILDING YOUR EMPIRE DIGITALLY</h3>
       <div className={styles.buttons}>
-        <button>See Pricing</button>
-        <button>Book an appointment</button>
+        <button className={`${styles.envoBtn} uppercase`}>See Pricing</button>
+        <button className={`${styles.envoBtn} ${styles.outline} uppercase`}>Book an appointment</button>
       </div>
 
       {/* Stats Section with Increment Animation */}
       <div className={styles.stats}>
         <div className={styles.statBox}>
-          <Image src={GlobalEdit} alt="Logo" width={60} height={60} />
-          <div>
+          <div className={styles.iconContainer}>
+            <Image src={GlobalEdit} alt="Websites build" />
+          </div>
+          <div className={styles.content}>
             <h3>
               <CountUp start={0} end={25} duration={2} />+
             </h3>
-            <span>Websites built</span>
+            <span className={styles.semiTitle}>Websites built</span>
           </div>
         </div>
         <div className={styles.statBox}>
-          <Image src={GlobalEdit} alt="Logo" width={60} height={60} />
-          <div>
+          <div className={styles.iconContainer}>
+            <Image src={Like} alt="Client satisfaction" />
+          </div>
+          <div className={styles.content}>
+            <h3>
+              <CountUp start={0} end={500} duration={2} />%
+            </h3>
+            <span className={styles.semiTitle}>Client satisfaction</span>
+          </div>
+        </div>
+        <div className={styles.statBox}>
+          <div className={styles.iconContainer}>
+            <Image src={People} alt="Team members" />
+          </div>
+          <div className={styles.content}>
+            <h3>
+              <CountUp start={0} end={25} duration={2} />+
+            </h3>
+            <span className={styles.semiTitle}>Team members</span>
+          </div>
+        </div>
+        <div className={styles.statBox}>
+          <div className={styles.iconContainer}>
+            <Image src={ProfileCircle} alt="Amazing clients" />
+          </div>
+          <div className={styles.content}>
             <h3>
               <CountUp start={0} end={500} duration={2} />+
             </h3>
-            <span>Amazing clients</span>
-          </div>
-        </div>
-        <div className={styles.statBox}>
-          <Image src={GlobalEdit} alt="Logo" width={60} height={60} />
-          <div>
-            <h3>
-              <CountUp start={0} end={97} duration={2} />+
-            </h3>
-            <span>Client satisfaction</span>
-          </div>
-        </div>
-        <div className={styles.statBox}>
-          <Image src={GlobalEdit} alt="Logo" width={60} height={60} />
-          <div>
-            <h3>
-              <CountUp start={0} end={2000} duration={2} />+
-            </h3>
-            <span>Projects completed</span>
+            <span className={styles.semiTitle}>Amazing clients</span>
           </div>
         </div>
       </div>
