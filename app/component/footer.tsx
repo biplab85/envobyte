@@ -1,5 +1,14 @@
 import React from "react";
 import styles from "./Footer.module.scss";
+import Image from "next/image";
+import Logo from "../../public/logo.svg";
+import Mail from "../../public/icon/email.svg";
+import WhatsUp from "../../public/icon/whatsUp-active.svg";
+import Facebook from "../../public/icon/facebook.svg";
+import Linkdin from "../../public/icon/linkdin-active.svg";
+import Instagram from "../../public/icon/instagram.svg";
+import Twitter from "../../public/icon/twitter.svg";
+import Pinterest from "../../public/icon/pinterest.svg";
 import Link from "next/link";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter, FaPinterestP } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -12,8 +21,10 @@ const Footer = () => {
         <div className={styles.footerContent}>
           {/* Left Section */}
           <div className={styles.footerBrand}>
-            <h2 className={styles.logo}>Envobyte</h2>
-            <p>We are an IT Company. We help businesses to bring ideas to life easily and affordably.</p>
+            <h2 className={`${styles.logo} mb-[20px]`}>
+              <Image src={Logo} alt="Logo" width={117} />
+            </h2>
+            <p className="font-">We are an IT Company. We help businesses to bring ideas to life easily and affordably.</p>
           </div>
 
           {/* Company Links */}
@@ -41,16 +52,32 @@ const Footer = () => {
           </div>
 
           {/* Get in Touch */}
-          <div className={styles.footerContact}>
+          <div className={`${styles.footerLinks} ${styles.GetInTouch}`}>
             <h3>Get in Touch</h3>
-            <p><MdEmail /> support@envobyte.com</p>
-            <p><FaWhatsapp /> +1 (667) 777 2477</p>
-            <div className={styles.socialIcons}>
-              <FaFacebookF />
-              <FaLinkedinIn />
-              <FaInstagram />
-              <FaTwitter />
-              <FaPinterestP />
+            <p className={`flex items-center justify-start`}>
+              <Image className={`mr-[12px]`} src={Mail} alt="Logo" width={24} />
+              <span>support@envobyte.com</span>
+            </p>
+            <p className={`flex items-center justify-start`}>
+              <Image className={`mr-[12px]`} src={WhatsUp} alt="Logo" width={24} />
+              <span>+1 (667) 777 2477</span>
+            </p>
+            <div className={`${styles.socialIcons} mt-[24px]`}>
+              <Link href="#" target="_blank" rel="noopener noreferrer">
+                <Image src={Facebook} alt="Facebook" />
+              </Link>
+              <Link className={`ml-[16px]`} href="#" target="_blank" rel="noopener noreferrer">
+                <Image src={Linkdin} alt="Linkdin" />
+              </Link>
+              <Link className={`ml-[16px]`} href="#" target="_blank" rel="noopener noreferrer">
+                <Image src={Instagram} alt="Instagram" />
+              </Link>
+              <Link className={`ml-[16px]`} href="#" target="_blank" rel="noopener noreferrer">
+                <Image src={Twitter} alt="Twitter" />
+              </Link>
+              <Link className={`ml-[16px]`} href="#" target="_blank" rel="noopener noreferrer">
+                <Image src={Pinterest} alt="Pinterest" />
+              </Link>
             </div>
           </div>
         </div>
