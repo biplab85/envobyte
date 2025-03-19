@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
+import Plus from "../../public/icon/Plus.svg";
 import styles from './faq.module.scss';
 
 // Define the FAQ data type
@@ -56,29 +58,36 @@ const FAQPage = () => {
     };
 
     return (
-        <div className={styles.faqContainer}>
-            <h2>Frequently Asked Questions</h2>
-            <div className={styles.accordion}>
-                {faqData.map((faq, index) => (
-                    <div
-                        key={faq.id}
-                        className={`${styles.accordionItem} ${activeIndex === index ? styles.active : ""}`}
-                    >
+        <section className={`${styles.faqContainerWrapper} bg-white`}>
+            <div className={styles.faqContainer}>
+                <h2 className={styles.title}>Frequently Asked Questions</h2>
+                <div className={styles.accordion}>
+                    {faqData.map((faq, index) => (
                         <div
-                            className={styles.accordionHeader}
-                            onClick={() => toggleAccordion(index)}
+                            key={faq.id}
+                            className={`${styles.accordionItem} ${activeIndex === index ? styles.active : ""}`}
                         >
-                            <h3>{faq.question}</h3>
-                        </div>
-                        {activeIndex === index && (
-                            <div className={styles.accordionContent}>
-                                <p>{faq.answer}</p>
+                            <div
+                                className={styles.accordionHeader}
+                                onClick={() => toggleAccordion(index)}
+                            >
+                                <h3>
+                                    <span>0{faq.id}</span>
+                                    {faq.question}
+                                    <Image className={styles.collapsible} src={Plus} alt="Collapsible" />
+                                </h3>
                             </div>
-                        )}
-                    </div>
-                ))}
+                            {activeIndex === index && (
+                                <div className={styles.accordionContent}>
+                                    <p>{faq.answer}</p>
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
+
     );
 };
 

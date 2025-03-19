@@ -1,44 +1,75 @@
-.faqContainer {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.accordion {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+.faqContainerWrapper {
+    font-family: "Inter 18pt";
+    .faqContainer {
+        padding: 20px;
+        max-width: 938px;
+        margin: 0 auto;
+        .title {
+            @apply text-[#0A2C8C] text-[48px] mb-[66px] text-center;
+            font-family: "Inter 18pt";
+            line-height: 0;
+            font-weight: bold;
+        }
+        .accordion {
+        }
+    }
 }
 
 .accordionItem {
     margin: 10px 0;
-    padding: 10px;
+    padding: 54px 0;
     cursor: pointer;
     border-bottom: 1px solid #ddd;
 
+    .accordionHeader {
+        font-size: 18px;
+        font-weight: bold;
+
+        h3 {
+            @apply relative flex items-center justify-start text-[#6D758F] font-[600] text-[24px] leading-[22px];
+
+            span {
+                @apply flex mr-[30px] text-[#0A2C8C] text-[18px];
+            }
+            .collapsible {
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+
+    .accordionContent {
+        padding: 10px 0;
+        font-size: 16px;
+        line-height: 1.5;
+        transition: max-height 0.3s ease-in-out;
+        overflow: hidden;
+        max-height: 0; // Initially collapsed
+
+        p {
+            @apply text-[#6D758F] text-[24px] leading-[34px] mt-[16px] mb-[0];
+        }
+    }
+
     &.active {
         .accordionHeader {
-            color: #007bff;
+            color: #0a2c8c;
+            h3 {
+                @apply text-[#0A2C8C];
+
+                .collapsible {
+                    transform: rotate(45deg);
+                }
+            }
         }
 
         .accordionContent {
             max-height: 200px; // Adjust this value based on content size
         }
     }
-}
-
-.accordionHeader {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.accordionContent {
-    padding: 10px 0;
-    font-size: 16px;
-    line-height: 1.5;
-    transition: max-height 0.3s ease-in-out;
-    overflow: hidden;
-    max-height: 0; // Initially collapsed
 }
 
 .accordionItem:last-child {

@@ -1,4 +1,17 @@
 @font-face {
+    font-family: 'Inter 18pt extrabold';
+    src: url('./fonts/Inter18pt-ExtraBold.eot');
+    src: url('./fonts/Inter18pt-ExtraBold.eot?#iefix') format('./fonts/embedded-opentype'),
+        url('./fonts/Inter18pt-ExtraBold.woff2') format('woff2'),
+        url('./fonts/Inter18pt-ExtraBold.woff') format('woff'),
+        url('./fonts/Inter18pt-ExtraBold.ttf') format('truetype'),
+        url('./fonts/Inter18pt-ExtraBold.svg#Inter18pt-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Inter 18pt';
     src: url('./fonts/Inter18pt-Bold.eot');
     src: url('./fonts/Inter18pt-Bold.eot?#iefix') format('./fonts/embedded-opentype'),
