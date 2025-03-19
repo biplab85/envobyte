@@ -1,0 +1,22 @@
+.team-container{
+    width: 1425px;
+    margin: 0 auto 190px auto;
+    font-family: 'Inter 18pt';
+    .service-item{
+        border: 0.5px solid #FFF;
+        color: #FFF;
+        h2{
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            font-size: 20px;
+        }
+        h3{
+            font-weight: 600;
+            font-size: 16px;
+        }
+        img{
+            width: 410px;
+            height: 385px;
+        }
+    }
+}
