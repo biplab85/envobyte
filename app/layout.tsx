@@ -14,6 +14,7 @@ import Faq from "./component/faq";
 import ProudClients from "./component/ProudClients";
 import ContactForm from "./component/ContactForm";
 import Footer from "./component/footer";
+import ProcessSteps from "./component/ProcessSteps";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,7 +45,9 @@ export default function RootLayout({
         <Banner />
         <Service />
         <MoreDetails />
+        <MoreDetails />
         <PreviousWork />
+        <ProcessSteps />
         <ProudClients />
         <TeamMembers />
         <Faq />
