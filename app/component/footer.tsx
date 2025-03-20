@@ -10,9 +10,7 @@ import Instagram from "../../public/icon/instagram.svg";
 import Twitter from "../../public/icon/twitter.svg";
 import Pinterest from "../../public/icon/pinterest.svg";
 import Link from "next/link";
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter, FaPinterestP } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { FaWhatsapp } from "react-icons/fa6";
+
 
 const Footer = () => {
   return (
@@ -62,7 +60,7 @@ const Footer = () => {
               <Image className={`mr-[12px]`} src={WhatsUp} alt="Logo" width={24} />
               <span>+1 (667) 777 2477</span>
             </p>
-            <div className={`${styles.socialIcons} mt-[24px]`}>
+            <div className={`${styles.socialIcons} mt-[8px]`}>
               <Link href="#" target="_blank" rel="noopener noreferrer">
                 <Image src={Facebook} alt="Facebook" />
               </Link>

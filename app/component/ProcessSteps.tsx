@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function ProcessSteps() {
     return (
         <div className="relative bg-gradient-to-b from-blue-900 to-blue-700 text-white py-20 px-10 flex flex-col items-center">

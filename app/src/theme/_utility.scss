@@ -33,3 +33,18 @@ body {
         }
     }
 }
+
+.contactContainer {
+    background-image: url(../../../public/bg/footer-bottom.svg), url(../../../public/bg/footer-cricle-left.svg),
+        url(../../../public/bg/footer-cricle-right.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center, 11% center, right 10% center;
+}
+
+.top-section {
+    background-image: url(../../../public/bg/ssss.svg), url(../../../public/bg/test.svg),
+        url(../../../public/bg/header-bottom.svg), url(../../../public/bg/header-circle-bottom.svg),
+        url(../../../public/bg/header-circle-right.svg);
+    background-repeat: no-repeat;
+    background-position: top, top, bottom, bottom, right bottom 15%;
+}

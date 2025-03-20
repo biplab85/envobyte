@@ -7,7 +7,7 @@ import EnvobyteActive from "../../public/more-details/01-active.svg";
 import Benefit from "../../public/more-details/02.svg";
 import Offer from "../../public/more-details/03.svg";
 
-const moreDetails = () => {
+const MoreDetails = () => {
   const [activeIndex, setActiveIndex] = useState(0); // Default active is the first box
 
   const contentData = [
@@ -75,4 +75,4 @@ const moreDetails = () => {
   );
 };
 
-export default moreDetails;
+export default MoreDetails; // ✅ Corrected the component name

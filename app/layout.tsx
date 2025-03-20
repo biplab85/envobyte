@@ -41,19 +41,22 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <Banner />
-        <Service />
-        <MoreDetails />
+        <section className="top-section">
+          <Header />
+          <Banner />
+          <Service />
+        </section>
         <MoreDetails />
         <PreviousWork />
         <ProcessSteps />
         <ProudClients />
         <TeamMembers />
         <Faq />
-        <ContactForm />
-        <Footer />
-       
+        <section className="contactContainer">
+          <ContactForm />
+          <Footer />
+        </section>
+
         <div className="container m-auto">
           {children}
         </div>

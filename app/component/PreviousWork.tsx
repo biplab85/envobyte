@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image"; // Import StaticImageData
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -27,15 +27,21 @@ import AdsImg2 from "../../public/prevoius/03.png";
 import AdsImg3 from "../../public/prevoius/02.png";
 
 const PreviousWork = () => {
-  const [activeTab, setActiveTab] = useState<"Website" | "UI/UX" | "SEO" | "Logo Design" | "Banner Design" | "Google Ads">("Website");
+  const [activeTab, setActiveTab] = useState<
+    "Website" | "UI/UX" | "SEO" | "Logo Design" | "Banner Design" | "Google Ads"
+  >("Website");
 
-  const tabsContent: Record<"Website" | "UI/UX" | "SEO" | "Logo Design" | "Banner Design" | "Google Ads", any[]> = {
-    Website: [WebsiteImg1, WebsiteImg2, WebsiteImg3, WebsiteImg1, WebsiteImg2, WebsiteImg3, SeoImg1, SeoImg2, SeoImg3, SeoImg1, SeoImg2, SeoImg3, UIUXImg1, UIUXImg2, UIUXImg3, UIUXImg1, UIUXImg2, UIUXImg3, BannerImg1, BannerImg2, BannerImg3, BannerImg1, BannerImg2, BannerImg3, AdsImg1, AdsImg2, AdsImg3, AdsImg1, AdsImg2, AdsImg3],
-    "UI/UX": [UIUXImg1, UIUXImg2, UIUXImg3, UIUXImg1, UIUXImg2, UIUXImg3, BannerImg1, BannerImg2, BannerImg3, BannerImg1, BannerImg2, BannerImg3, UIUXImg1, UIUXImg2, UIUXImg3, UIUXImg1, UIUXImg2, UIUXImg3, BannerImg1, BannerImg2, BannerImg3, BannerImg1, BannerImg2, BannerImg3, AdsImg1, AdsImg2, AdsImg3, AdsImg1, AdsImg2, AdsImg3],
-    SEO: [SeoImg1, SeoImg2, SeoImg3, SeoImg1, SeoImg2, SeoImg3, LogoImg1, LogoImg2, LogoImg3, LogoImg1, LogoImg2, LogoImg3, UIUXImg1, UIUXImg2, UIUXImg3, UIUXImg1, UIUXImg2, UIUXImg3, BannerImg1, BannerImg2, BannerImg3, BannerImg1, BannerImg2, BannerImg3, AdsImg1, AdsImg2, AdsImg3, AdsImg1, AdsImg2, AdsImg3],
-    "Logo Design": [UIUXImg1, UIUXImg2, UIUXImg3, UIUXImg1, UIUXImg2, UIUXImg3, BannerImg1, BannerImg2, BannerImg3, BannerImg1, BannerImg2, BannerImg3, UIUXImg1, UIUXImg2, UIUXImg3, UIUXImg1, UIUXImg2, UIUXImg3, BannerImg1, BannerImg2, BannerImg3, BannerImg1, BannerImg2, BannerImg3, AdsImg1, AdsImg2, AdsImg3, AdsImg1, AdsImg2, AdsImg3],
-    "Banner Design": [AdsImg1, AdsImg2, AdsImg3, AdsImg1, AdsImg2, AdsImg3, BannerImg1, BannerImg2, BannerImg3, BannerImg1, BannerImg2, BannerImg3, UIUXImg1, UIUXImg2, UIUXImg3, UIUXImg1, UIUXImg2, UIUXImg3, BannerImg1, BannerImg2, BannerImg3, BannerImg1, BannerImg2, BannerImg3, AdsImg1, AdsImg2, AdsImg3, AdsImg1, AdsImg2, AdsImg3],
-    "Google Ads": [UIUXImg1, UIUXImg2, UIUXImg3, UIUXImg1, UIUXImg2, UIUXImg3, BannerImg1, BannerImg2, BannerImg3, BannerImg1, BannerImg2, BannerImg3, AdsImg1, AdsImg2, AdsImg3, AdsImg1, AdsImg2, AdsImg3, UIUXImg1, UIUXImg2, UIUXImg3, UIUXImg1, UIUXImg2, UIUXImg3, BannerImg1, BannerImg2, BannerImg3, BannerImg1, BannerImg2, BannerImg3, AdsImg1, AdsImg2, AdsImg3, AdsImg1, AdsImg2, AdsImg3],
+  // Use StaticImageData[] instead of any[]
+  const tabsContent: Record<
+    "Website" | "UI/UX" | "SEO" | "Logo Design" | "Banner Design" | "Google Ads",
+    StaticImageData[]
+  > = {
+    Website: [WebsiteImg1, WebsiteImg2, WebsiteImg3, SeoImg1, SeoImg2, SeoImg3, UIUXImg1, UIUXImg2, UIUXImg3, BannerImg1, BannerImg2, BannerImg3, AdsImg1, AdsImg2, AdsImg3],
+    "UI/UX": [UIUXImg1, UIUXImg2, UIUXImg3, BannerImg1, BannerImg2, BannerImg3, AdsImg1, AdsImg2, AdsImg3],
+    SEO: [SeoImg1, SeoImg2, SeoImg3, LogoImg1, LogoImg2, LogoImg3, UIUXImg1, UIUXImg2, UIUXImg3, BannerImg1, BannerImg2, BannerImg3, AdsImg1, AdsImg2, AdsImg3],
+    "Logo Design": [LogoImg1, LogoImg2, LogoImg3, BannerImg1, BannerImg2, BannerImg3, AdsImg1, AdsImg2, AdsImg3],
+    "Banner Design": [BannerImg1, BannerImg2, BannerImg3, AdsImg1, AdsImg2, AdsImg3],
+    "Google Ads": [AdsImg1, AdsImg2, AdsImg3, BannerImg1, BannerImg2, BannerImg3],
   };
 
   const firstRow = tabsContent[activeTab].filter((_, index) => index % 2 === 0);
@@ -67,7 +73,9 @@ const PreviousWork = () => {
           <h3>Check Our Previous Work</h3>
         </div>
         <div>
-          <button className="envo-btn rounded-[4px] pt-[16px] pb-[16px] pl-[46px] pr-[46px]">All Portfolio</button>
+          <button className="envo-btn rounded-[4px] pt-[16px] pb-[16px] pl-[46px] pr-[46px]">
+            All Portfolio
+          </button>
         </div>
       </div>
 
@@ -75,7 +83,10 @@ const PreviousWork = () => {
         <ul className="tabMenu flex items-center justify-start mt-[30px]">
           {Object.keys(tabsContent).map((tab) => (
             <li className="mr-[42px]" key={tab}>
-              <button className={activeTab === tab ? "active" : ""} onClick={() => setActiveTab(tab as any)}>
+              <button
+                className={activeTab === tab ? "active" : ""}
+                onClick={() => setActiveTab(tab as typeof activeTab)}
+              >
                 {tab}
               </button>
             </li>
@@ -97,7 +108,9 @@ const PreviousWork = () => {
         ))}
       </Slider>
 
-      <div className="service-footer"><h4>Creative Solution</h4></div>
+      <div className="service-footer">
+        <h4>Creative Solution</h4>
+      </div>
     </div>
   );
 };

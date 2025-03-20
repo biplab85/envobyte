@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import WebsiteImg from "../../public/service/website.svg";
 import WebsiteImg1 from "../../public/service/wordpress.png";
 import WebsiteImg2 from "../../public/service/ecommerce.png";
@@ -26,72 +26,58 @@ import Link from "next/link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Define types for tab content
 interface TabContent {
   id: number;
   title: string;
   subtitle: string;
-  image: any; // Image import
+  image: StaticImageData;
 }
 
 const Service = () => {
-  const [activeTab, setActiveTab] = useState<"Website" | "UI/UX" | "SEO" | "Logo Design" | "Banner Design" | "Google Ads">("Website");
+  const [activeTab, setActiveTab] = useState<
+    "Website" | "UI/UX" | "SEO" | "Logo Design" | "Banner Design" | "Google Ads"
+  >("Website");
 
-  // Define tabsContent with images
-  const tabsContent: Record<"Website" | "UI/UX" | "SEO" | "Logo Design" | "Banner Design" | "Google Ads", TabContent[]> = {
+  const tabsContent: Record<
+    "Website" | "UI/UX" | "SEO" | "Logo Design" | "Banner Design" | "Google Ads",
+    TabContent[]
+  > = {
     Website: [
       { id: 1, title: "WordPress Website", subtitle: "Design & Development", image: WebsiteImg },
       { id: 2, title: "E-Commerce Website", subtitle: "Design & Development", image: WebsiteImg2 },
       { id: 3, title: "Business Website", subtitle: "Design & Development", image: WebsiteImg3 },
       { id: 4, title: "Portfolio Website", subtitle: "Personal Portfolio", image: WebsiteImg1 },
-      { id: 5, title: "Corporate Website", subtitle: "Enterprise Solutions", image: WebsiteImg2 },
-      { id: 6, title: "Blog Website", subtitle: "Content Management", image: WebsiteImg3 },
     ],
     "UI/UX": [
       { id: 1, title: "UI Design", subtitle: "User Interface Design", image: UIUXImg1 },
       { id: 2, title: "UX Research", subtitle: "User Experience Research", image: UIUXImg2 },
-      { id: 3, title: "Prototyping", subtitle: "Prototyping & Testing", image: UIUXImg3 },
-      { id: 4, title: "Wireframing", subtitle: "Sketch & Wireframe", image: UIUXImg1 },
-      { id: 5, title: "Mobile UI", subtitle: "App Interface Design", image: UIUXImg2 },
-      { id: 6, title: "Website UI", subtitle: "Website Layout Design", image: UIUXImg3 },
+      { id: 3, title: "UX Research", subtitle: "User Experience Research", image: UIUXImg3 },
     ],
     SEO: [
       { id: 1, title: "SEO Audit", subtitle: "On-Page SEO Audit", image: SeoImg1 },
       { id: 2, title: "Keyword Research", subtitle: "Search Engine Optimization", image: SeoImg2 },
-      { id: 3, title: "Link Building", subtitle: "Backlink Strategy", image: SeoImg3 },
-      { id: 4, title: "Technical SEO", subtitle: "Speed Optimization", image: SeoImg1 },
-      { id: 5, title: "Local SEO", subtitle: "Google My Business", image: SeoImg2 },
-      { id: 6, title: "Content SEO", subtitle: "Optimized Blog Writing", image: SeoImg3 },
+      { id: 3, title: "Keyword Research", subtitle: "Search Engine Optimization", image: SeoImg3 },
     ],
     "Logo Design": [
       { id: 1, title: "Business Logo", subtitle: "Logo for Your Business", image: LogoImg1 },
       { id: 2, title: "Brand Logo", subtitle: "Brand Identity Design", image: LogoImg2 },
-      { id: 3, title: "Custom Logo", subtitle: "Unique Logo Creation", image: LogoImg3 },
-      { id: 4, title: "Minimalist Logo", subtitle: "Modern Logo Design", image: LogoImg1 },
-      { id: 5, title: "Mascot Logo", subtitle: "Gaming & Fun", image: LogoImg2 },
-      { id: 6, title: "Hand-Drawn Logo", subtitle: "Custom Illustration", image: LogoImg3 },
+      { id: 3, title: "Brand Logo", subtitle: "Brand Identity Design", image: LogoImg3 },
     ],
     "Banner Design": [
       { id: 1, title: "Web Banners", subtitle: "Banner Ads for Web", image: BannerImg1 },
       { id: 2, title: "Social Media Banners", subtitle: "Social Media Ads", image: BannerImg2 },
-      { id: 3, title: "Email Banners", subtitle: "Email Marketing Banners", image: BannerImg3 },
-      { id: 4, title: "YouTube Thumbnails", subtitle: "Custom Video Thumbnails", image: BannerImg1 },
-      { id: 5, title: "Facebook Cover", subtitle: "Profile Cover Design", image: BannerImg2 },
-      { id: 6, title: "Instagram Stories", subtitle: "Engaging Story Ads", image: BannerImg3 },
+      { id: 3, title: "Social Media Banners", subtitle: "Social Media Ads", image: BannerImg3 },
     ],
     "Google Ads": [
       { id: 1, title: "PPC Campaigns", subtitle: "Pay Per Click Advertising", image: AdsImg1 },
       { id: 2, title: "Display Ads", subtitle: "Visual Ads Campaign", image: AdsImg2 },
-      { id: 3, title: "Google Shopping", subtitle: "E-commerce Ads", image: AdsImg3 },
-      { id: 4, title: "Retargeting Ads", subtitle: "Convert More Visitors", image: AdsImg1 },
-      { id: 5, title: "Video Ads", subtitle: "YouTube Advertising", image: AdsImg2 },
-      { id: 6, title: "Search Ads", subtitle: "Google Search Results", image: AdsImg3 },
+      { id: 3, title: "Display Ads", subtitle: "Visual Ads Campaign", image: AdsImg3 },
     ],
   };
 
   const settings = {
     dots: false,
-    arrows: false, 
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3.2,
@@ -100,7 +86,6 @@ const Service = () => {
 
   return (
     <div className="service-container">
-      {/* Header Section */}
       <div className="header-content">
         <div>
           <h2>DIGITAL SERVICES</h2>
@@ -110,8 +95,6 @@ const Service = () => {
           <button className="envo-btn rounded-[4px] pt-[16px] pb-[16px] pl-[46px] pr-[46px]">All Services</button>
         </div>
       </div>
-
-      {/* Tabs Section */}
       <div className="tab-content-wrapper">
         <ul className="tabMenu flex items-center justify-start mt-[30px]">
           {["Website", "UI/UX", "SEO", "Logo Design", "Banner Design", "Google Ads"].map((tab) => (
@@ -128,7 +111,6 @@ const Service = () => {
           ))}
         </ul>
 
-        {/* Tab Content Section */}
         <div className="tabContent">
           <Slider {...settings}>
             {tabsContent[activeTab].map((item) => (

@@ -54,10 +54,24 @@
                     font-size: 16px;
                     transition: 0.3s;
                     display: flex;
-                    margin: 0 0 12px 0;
+                    margin-bottom:12px;
 
                     &:hover {
                         color: #ff4500;
+                    }
+                }
+
+                &.GetInTouch {
+                    p {
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin-bottom: 16px;
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                    a{
+                        margin-bottom: 0;
                     }
                 }
             }
@@ -79,17 +93,7 @@
             margin-bottom: 5px;
         }
 
-        &.GetInTouch {
-            border: 1px solid red;
-            p {
-                font-size: 16px;
-                line-height: 24px;
-                margin: 0 0 16px 0;
-                &:last-child {
-                    margin: 0;
-                }
-            }
-        }
+     
     }
 
     .socialIcons {
