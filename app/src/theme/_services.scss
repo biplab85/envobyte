@@ -1,4 +1,5 @@
 .service-container {
+    padding-bottom: 62px;
     //width: var(--container-width);
     .header-content {
         width: var(--container-width);
@@ -118,6 +119,8 @@
     }
 
     .service-footer {
+        width: var(--container-width);
+        margin: auto;
         display: flex;
         align-items: center;
         justify-content: flex-end;

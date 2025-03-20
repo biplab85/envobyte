@@ -77,7 +77,7 @@ const Service = () => {
 
   const settings = {
     dots: false,
-    arrows: false,
+    arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3.2,

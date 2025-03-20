@@ -49,7 +49,7 @@ const PreviousWork = () => {
 
   const settingsLTR = {
     dots: false,
-    arrows: false,
+    arrows: true,
     infinite: true,
     speed: 5000,
     autoplay: true,

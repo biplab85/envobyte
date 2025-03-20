@@ -68,6 +68,19 @@ export default function ContactForm() {
         <div className={styles.contactContainer}>
             <div className={styles.contactContainerContent}>
                 <form onSubmit={handleSubmit} className={styles.formContainer}>
+                    {/* Display all errors in a single box */}
+                    {Object.keys(errors).length > 0 && (
+                        <div className={`${styles.errorBox} relative mb-[20px]`}>
+                            <div className={styles.errorMessages}>
+                                {Object.values(errors).map((error, index) => (
+                                    <span key={index}>{error}</span>
+                                ))}
+                            </div>
+                            <button type="button" onClick={handleCloseErrorBox} className={styles.closeButton}>
+                              
+                            </button>
+                        </div>
+                    )}
                     <div className={styles.fieldContainer}>
                         <div className={`${styles.formGroup} w-[48%]`}>
                             <label>Name</label>
@@ -127,19 +140,7 @@ export default function ContactForm() {
                         />
                     </div>
 
-                    {/* Display all errors in a single box */}
-                    {Object.keys(errors).length > 0 && (
-                        <div className={styles.errorBox}>
-                            <div className={styles.errorMessages}>
-                                {Object.values(errors).map((error, index) => (
-                                    <span key={index}>{error}</span>
-                                ))}
-                            </div>
-                            <button type="button" onClick={handleCloseErrorBox} className={styles.closeButton}>
-                                &times;
-                            </button>
-                        </div>
-                    )}
+
 
                     <button type="submit" className={styles.submitButton}>
                         Send message<Image src={Arrow} alt=" Send message" width={12} />

@@ -39,14 +39,14 @@ const TeamMembers = () => {
     };
 
     return (
-        <section className="bg-[#FFF] pb-[172px]">
+        <section className="bg-[#FFF] pb-[172px] pt-[202px]">
             <div className="proudeCLient-container">
                 <div className="proudeCLient-header text-center mb-[38px]">
                     <h2 className="title text-[#0C89FF] text-[16px] mb-[16px] tracking-[3.84px]">CLIENT REVIEWS</h2>
                     <h3 className="text-[#001246] text-[48px] mb-0">Our Proud Clients</h3>
                 </div>
                 <div className="service-slider-container">
-                    <Slider {...settings}>
+                    <Slider className="teamContentSlider" {...settings}>
                         {teamMembers.map((member, index) => (
                             <div className="testmoial-content" key={index}>
                                 <div>

@@ -86,11 +86,17 @@
                 }
 
                 .closeButton {
-                    background: none;
-                    border: none;
+                    background-image: url(../../public/icon/close.svg);
                     color: #721c24;
                     font-size: 16px;
                     cursor: pointer;
+                    background-repeat: no-repeat;
+                    width: 33px;
+                    height: 33px;
+                    background-position: center;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
 
                     &:hover {
                         color: #dc3545;
@@ -159,11 +165,11 @@
                 }
                 .socialContent {
                     margin: 0 0 0 16px;
-                    span{
+                    span {
                         display: block;
                         font-size: 14px;
                     }
-                    a{
+                    a {
                         display: block;
                         font-size: 16px;
                         font-weight: 600;
