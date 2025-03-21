@@ -3,6 +3,9 @@
     width: 982px;
     margin: auto;
     font-family: "Inter 18pt";
+    @media screen and (min-width: 320px) and (max-width: 800px) {
+        width: 100%;
+    }
     .proudeCLient-header {
         font-family: "Inter 18pt";
         h2 {

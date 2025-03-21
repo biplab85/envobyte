@@ -2,14 +2,25 @@
     font-family: "Raleway";
     border-top: 1px solid rgba(229, 231, 235, 0.2);
     padding: 105px 0 0;
+
+    @media screen and (max-width: 768px) {
+        padding: 50px 0 0;
+     }
     .container {
         .footerContent {
             width: 1335px;
+            @media screen and (min-width: 320px) and (max-width: 1440px) {
+                width: 92%;
+            }
             margin: auto;
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 20px;
             padding-bottom: 20px;
+
+            @media screen and (min-width: 320px) and (max-width: 1440px) {
+                gap: 8px;
+            }
 
             @media (max-width: 900px) {
                 grid-template-columns: repeat(2, 1fr);
@@ -24,6 +35,9 @@
                 text-align: left;
                 margin-right: 160px;
                 min-width: 250px;
+                @media screen and (min-width: 320px) and (max-width: 1440px) {
+                    margin-right: 10px;
+                }
 
                 .logo {
                     font-size: 24px;
@@ -42,6 +56,13 @@
                 flex-direction: column;
                 gap: 8px;
 
+                @media screen and (max-width: 768px) {
+                    border-radius: 8px;
+                    padding: 20px;
+                    background-color: #052480;
+                    margin: 14px 0;
+                }
+
                 h3 {
                     font-size: 18px;
                     margin-bottom: 20px;
@@ -54,7 +75,7 @@
                     font-size: 16px;
                     transition: 0.3s;
                     display: flex;
-                    margin-bottom:12px;
+                    margin-bottom: 12px;
 
                     &:hover {
                         color: #ff4500;
@@ -70,7 +91,7 @@
                             margin: 0;
                         }
                     }
-                    a{
+                    a {
                         margin-bottom: 0;
                     }
                 }
@@ -92,8 +113,6 @@
             font-size: 14px;
             margin-bottom: 5px;
         }
-
-     
     }
 
     .socialIcons {
@@ -102,6 +121,10 @@
         font-size: 18px;
         cursor: pointer;
         a {
+            margin-left: 16px;
+            @media screen and (min-width: 320px) and (max-width: 1200px) {
+                margin-left: 3px;
+            }
             img {
                 min-width: 30px;
             }

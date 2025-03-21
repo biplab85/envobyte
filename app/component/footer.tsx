@@ -64,16 +64,16 @@ const Footer = () => {
               <Link href="#" target="_blank" rel="noopener noreferrer">
                 <Image src={Facebook} alt="Facebook" />
               </Link>
-              <Link className={`ml-[16px]`} href="#" target="_blank" rel="noopener noreferrer">
+              <Link href="#" target="_blank" rel="noopener noreferrer">
                 <Image src={Linkdin} alt="Linkdin" />
               </Link>
-              <Link className={`ml-[16px]`} href="#" target="_blank" rel="noopener noreferrer">
+              <Link href="#" target="_blank" rel="noopener noreferrer">
                 <Image src={Instagram} alt="Instagram" />
               </Link>
-              <Link className={`ml-[16px]`} href="#" target="_blank" rel="noopener noreferrer">
+              <Link href="#" target="_blank" rel="noopener noreferrer">
                 <Image src={Twitter} alt="Twitter" />
               </Link>
-              <Link className={`ml-[16px]`} href="#" target="_blank" rel="noopener noreferrer">
+              <Link href="#" target="_blank" rel="noopener noreferrer">
                 <Image src={Pinterest} alt="Pinterest" />
               </Link>
             </div>

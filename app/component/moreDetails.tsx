@@ -39,10 +39,10 @@ const MoreDetails = () => {
       <div className="moreDetails-content">
         <div className="moreDetails-header text-center mb-[38px]">
           <h2 className="title text-[#0C89FF] text-[16px] mb-[16px] tracking-[3.84px]">MORE DETAILS</h2>
-          <h3 className="text-[#0A2C8C] text-[48px] mb-0 tracking-[0.96px]">Get Your Answers</h3>
+          <h3 className="text-[#0A2C8C] text-[48px] mob:text-[28px] mb-0 tracking-[0.96px]">Get Your Answers</h3>
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between custom:block">
           {contentData.map((item, index) => (
             <div
               key={index}

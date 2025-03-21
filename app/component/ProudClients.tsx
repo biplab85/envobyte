@@ -36,14 +36,35 @@ const TeamMembers = () => {
         rows: 2,          // 2 rows of items
         slidesPerRow: 1,  // Only 1 item per column (the default behavior)
         slidesToScroll: 1,
+
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     };
 
     return (
-        <section className="bg-[#FFF] pb-[172px] pt-[202px]">
+        <section className="bg-[#FFF] pb-[172px] pt-[202px]  mob:pb-[100px] mob:pt-[50px] mob:mb-[]">
             <div className="proudeCLient-container">
                 <div className="proudeCLient-header text-center mb-[38px]">
                     <h2 className="title text-[#0C89FF] text-[16px] mb-[16px] tracking-[3.84px]">CLIENT REVIEWS</h2>
-                    <h3 className="text-[#001246] text-[48px] mb-0">Our Proud Clients</h3>
+                    <h3 className="text-[#001246] text-[48px] mob:text-[35px] mb-0">Our Proud Clients</h3>
                 </div>
                 <div className="service-slider-container">
                     <Slider className="teamContentSlider" {...settings}>

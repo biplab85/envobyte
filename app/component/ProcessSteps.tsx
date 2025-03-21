@@ -1,11 +1,11 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 
 const ProcessSteps = () => {
     return (
-        <section className="step-container">
+        <section className="relative step-container">
+            <h4 className="horizontal-title">Project in steps</h4>
             <div className="step-header">
                 <h2>HOW WE WORK</h2>
                 <h3>Our Process For Delivering Results</h3>

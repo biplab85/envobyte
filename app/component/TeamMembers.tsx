@@ -41,14 +41,34 @@ const TeamMembers = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   };
 
   return (
     <section className="bg-[#FFF]">
       <div className="team-container">
-        <div className="proudeCLient-header text-center mb-[38px]">
+        <div className="proudeCLient-header text-center mb-[38px] mob:pt-[50px]">
           <h2 className="title text-[#0C89FF] text-[16px] mb-[16px] tracking-[3.84px]">EXPERIENCED TEAM</h2>
-          <h3 className="text-[#001246] text-[48px] mb-0">Our Team Members</h3>
+          <h3 className="text-[#001246] text-[48px] mob:text-[35px] mb-0 font-bold leading-[1]">Our Team Members</h3>
         </div>
         <div className="service-slider-container">
           <Slider {...settings}>

@@ -4,11 +4,20 @@
         padding: 20px;
         max-width: 938px;
         margin: 0 auto;
+        @media screen and (max-width: 768px) {
+            padding: 50px 20px;
+        }
         .title {
-            @apply text-[#0A2C8C] text-[48px] mb-[66px] text-center;
+            @apply text-[#0A2C8C] text-[48px] mob:text-[35px] mb-[66px] mob:mb-[0] text-center;
             font-family: "Inter 18pt";
             line-height: 0;
             font-weight: bold;
+
+            @media screen and (max-width: 768px) {
+                margin-bottom: 0;
+                font-size: 35px;
+                line-height: 50px !important;
+            }
         }
         .accordion {
         }
@@ -21,12 +30,26 @@
     cursor: pointer;
     border-bottom: 1px solid #ddd;
 
+    @media screen and (max-width: 768px) {
+        padding: 20px 0;
+    }
+
     .accordionHeader {
         font-size: 18px;
         font-weight: bold;
 
         h3 {
-            @apply relative flex items-center justify-start text-[#6D758F] font-[600] text-[24px] leading-[22px];
+            @apply relative 
+            flex
+            items-center 
+            justify-start 
+            text-[#6D758F] 
+            font-[600] 
+            text-[24px]
+            mob:text-[16px] 
+            mob:leading-[22px] 
+            mob:w-[90%] 
+            leading-[22px];
 
             span {
                 @apply flex mr-[30px] text-[#0A2C8C] text-[18px];
@@ -37,6 +60,9 @@
                 top: 0;
                 bottom: 0;
                 margin: auto;
+                @media screen and (max-width: 768px) {
+                    right: -20px;
+                }
             }
         }
     }
@@ -50,7 +76,7 @@
         max-height: 0; // Initially collapsed
 
         p {
-            @apply text-[#6D758F] text-[24px] leading-[34px] mt-[16px] mb-[0];
+            @apply text-[#6D758F] text-[24px] mob:text-[14px] mob:leading-[22px] leading-[34px] mt-[16px] mb-[0];
         }
     }
 

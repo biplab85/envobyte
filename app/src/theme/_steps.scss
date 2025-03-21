@@ -1,6 +1,6 @@
 .step-container {
     background-image: url(../../../public/bg/steps-bg.svg);
-    background-color: #FFF;
+    background-color: #fff;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -11,10 +11,50 @@
     justify-content: center;
     flex-direction: column;
     font-family: "Raleway";
+
+    .horizontal-title {
+        font-size: 14px;
+        letter-spacing: 3.72px;
+        line-height: 20px;
+        position: absolute;
+        padding-left: 76px;
+        color: #fff;
+        right: 9%;
+        top: 32%;
+        transform: rotate(270deg);
+        text-transform: uppercase;
+        @media screen and (max-width: 768px) {
+            top: 50%;
+            /* bottom: 0; */
+            margin: auto;
+            right: -67px;
+            z-index: 2;
+        }
+        &::after {
+            content: "";
+            width: 60px;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            background-color: #ffffff;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+    @media screen and (min-width: 320px) and (max-width: 800px) {
+        background-attachment: inherit;
+        background-size: cover;
+        padding: 50px 0;
+        height: auto;
+    }
     .step-header {
         width: 700px;
         margin: 0 auto 82px auto;
         text-align: center;
+        @media screen and (min-width: 320px) and (max-width: 800px) {
+            width: 100%;
+        }
         h2 {
             font-size: 20px;
             letter-spacing: 1px;
@@ -26,6 +66,9 @@
             line-height: normal;
             font-weight: bold;
             margin: 0 0 20px 0;
+            @media screen and (max-width: 768px) {
+                font-size: 35px;
+            }
         }
         p {
             font-weight: normal;
@@ -42,6 +85,30 @@
         align-items: flex-start;
         justify-content: space-between;
         width: 1325px;
+
+        @media screen and (min-width: 320px) and (max-width: 1350px) {
+            width: 90%;
+            background-position: 50% center;
+            background-size: 90%;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 800px) {
+            position: relative;
+            display: block;
+            background-image: none;
+            &::before {
+                content: "";
+                width: 1px;
+                height: 100%;
+                border: 1px dashed #fff;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 0;
+            }
+        }
+
         .steps-circle {
             background: linear-gradient(0deg, #001c6c 0%, #ff693b 100%);
             display: flex;
@@ -52,8 +119,26 @@
             height: 196px;
             border-radius: 100%;
 
-            &.second, &.fourth{
+            @media screen and (min-width: 320px) and (max-width: 1440px) {
+                justify-content: center;
+            }
+
+            @media screen and (max-width: 768px) {
+                margin-bottom: 40px;
+                position: relative;
+                z-index: 1;
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+            &.second,
+            &.fourth {
                 margin-top: 197px;
+
+                @media screen and (min-width: 320px) and (max-width: 800px) {
+                    margin-top: 0;
+                }
             }
 
             span {
@@ -62,6 +147,12 @@
                 font-weight: bold;
                 font-size: 45px;
                 line-height: 45px;
+
+                @media screen and (min-width: 320px) and (max-width: 1440px) {
+                    font-size: 25px;
+                    line-height: 25px;
+                    margin: 0 0 0 33px;
+                }
             }
             h3 {
                 display: block;
@@ -69,17 +160,21 @@
                 font-weight: bold;
                 font-size: 24px;
                 line-height: 28px;
+                @media screen and (min-width: 320px) and (max-width: 1440px) {
+                    font-size: 18px;
+                    line-height: 25px;
+                }
             }
         }
     }
 
-    .step-contact-btn{
+    .step-contact-btn {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-top: 82px;
 
-        a{
+        a {
             border-radius: 4px;
             padding: 17px 74px;
         }

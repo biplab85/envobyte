@@ -6,8 +6,33 @@ body {
 
 :root {
     --default-bg: #04135b;
-    --container-width: 1795px;
+    --container-width: 90vw; /* Default for smaller screens */
 }
+
+@media (min-width: 1200px) {
+    :root {
+        --container-width: 90%; /* Large screens */
+    }
+}
+
+@media (min-width: 1400px) {
+    :root {
+        --container-width: 90%; /* Extra-large screens */
+    }
+}
+
+@media (min-width: 1600px) {
+    :root {
+        --container-width: 90%; /* Wider screens */
+    }
+}
+
+@media (min-width: 1800px) {
+    :root {
+        --container-width: 1795px; /* Your original max width */
+    }
+}
+
 .envo-btn {
     background-color: #ff693b;
     font-size: 14px;
@@ -62,34 +87,38 @@ body {
     border-radius: 6px;
     background-repeat: no-repeat !important;
     background-position: center !important;
+
+    @media screen and (max-width: 768px) {
+        bottom: -70px;
+     }
     &::before {
         display: none !important;
     }
-    &:hover{
-        background-color: #FF693B !important;
-        border: 1px solid #FF693B !important;
+    &:hover {
+        background-color: #ff693b !important;
+        border: 1px solid #ff693b !important;
     }
 }
 .slick-next {
     background-image: url(../../../public/icon/next-arrow.svg) !important;
-    left: -3% !important;
-    &:hover{
-        background-image: url(../../../public/icon/next-arrow-active.svg) !important; 
+    left: -65px !important;
+    &:hover {
+        background-image: url(../../../public/icon/next-arrow-active.svg) !important;
     }
 }
 .slick-prev {
     background-image: url(../../../public/icon/prev-arrow.svg) !important;
-    right: -3% !important;
-    &:hover{
-        background-image: url(../../../public/icon/prev-arrow-active.svg) !important; 
+    right: -65px !important;
+    &:hover {
+        background-image: url(../../../public/icon/prev-arrow-active.svg) !important;
     }
 }
 
-.teamContentSlider{
+.teamContentSlider {
     .slick-next {
-        left: -5% !important;
+        left: -65px !important;
     }
     .slick-prev {
-        right: -5% !important;
+        right: -65px !important;
     }
 }

@@ -1,10 +1,22 @@
-.container{
+.container {
     width: var(--container-width);
-    &.header-wrapper{
-        font-family: 'Inter 18pt';
+    &.header-wrapper {
+        font-family: "Inter 18pt";
         font-weight: 600;
-        .envo-btn{
+        .envo-btn {
             font-weight: 500;
+        }
+    }
+}
+
+.header-container {
+    @media screen and (min-width: 320px) and (max-width: 800px) {
+        width: 100% !important;
+        max-width: 95%;
+    }
+    .header-pricing-btn {
+        @media screen and (min-width: 320px) and (max-width: 800px) {
+            display: none !important;
         }
     }
 }

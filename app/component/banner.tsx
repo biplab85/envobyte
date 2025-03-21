@@ -41,7 +41,7 @@ const Banner = () => {
             <h3>
               <CountUp start={0} end={25} duration={2} />+
             </h3>
-            <span className={styles.semiTitle}>Websites built</span>
+            <span className={`${styles.semiTitle} whitespace-nowrap`}>Websites built</span>
           </div>
         </div>
         <div className={styles.statBox}>
@@ -52,7 +52,7 @@ const Banner = () => {
             <h3>
               <CountUp start={0} end={500} duration={2} />%
             </h3>
-            <span className={styles.semiTitle}>Client satisfaction</span>
+            <span className={`${styles.semiTitle} whitespace-nowrap`}>Client satisfaction</span>
           </div>
         </div>
         <div className={styles.statBox}>
@@ -63,7 +63,7 @@ const Banner = () => {
             <h3>
               <CountUp start={0} end={25} duration={2} />+
             </h3>
-            <span className={styles.semiTitle}>Team members</span>
+            <span className={`${styles.semiTitle} whitespace-nowrap`}>Team members</span>
           </div>
         </div>
         <div className={styles.statBox}>
@@ -74,7 +74,7 @@ const Banner = () => {
             <h3>
               <CountUp start={0} end={500} duration={2} />+
             </h3>
-            <span className={styles.semiTitle}>Amazing clients</span>
+            <span className={`${styles.semiTitle} whitespace-nowrap`}>Amazing clients</span>
           </div>
         </div>
       </div>
