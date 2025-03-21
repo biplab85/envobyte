@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <header className="header-container container m-auto header-wrapper py-4 bg-[--default-bg] flex items-center justify-between">
       {/* Logo */}
-      <Image src={Logo} alt="Logo" width={180} className="md:w-[140px] custom:w-[80px]" />
+      <Image src={Logo} alt="Logo" width={180} className="w-[117px] custom:w-[80px]" />
 
       {/* Hamburger Button for Mobile */}
       <button
@@ -52,7 +52,7 @@ const Header = () => {
       </nav>
 
       {/* CTA Button */}
-      <button className="header-pricing-btn hidden md:block envo-btn py-2 px-6 rounded-lg">
+      <button className="header-pricing-btn hidden md:block envo-btn py-[20px] px-[80px] rounded-[4px]">
         See Pricing
       </button>
     </header>
