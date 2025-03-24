@@ -39,10 +39,13 @@ const Header = () => {
           {NAV_LINKS.map(({ name, href }) => (
             <li key={href}>
               <Link
-                href={href}
-                className={`hover:text-[#FF693B] transition-all ${pathname === href ? "text-[#FF693B] font-bold" : "text-gray-400"
-                  }`}
-                onClick={() => setMenuOpen(false)}
+                href={pathname} // Prevents navigation by keeping the same path
+                className={`cursor-pointer hover:text-[#FF693B] transition-all ${pathname === href ? "text-[#FF693B] font-bold" : "text-gray-400"
+                  } cursor-default`} // cursor-default disables clicking
+                onClick={(e) => {
+                  e.preventDefault(); // Stops default navigation
+                  setMenuOpen(false); // Closes the menu on mobile
+                }}
               >
                 {name}
               </Link>
